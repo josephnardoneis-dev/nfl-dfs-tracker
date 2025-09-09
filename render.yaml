@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nfl-dfs-tracker
+    env: python
+    buildCommand: ./build.sh
+    startCommand: python start.py
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
+      - key: FLASK_ENV
+        value: production
+    healthCheckPath: /

@@ -133,4 +133,5 @@ def trends_page():
     return render_template('trends.html')
 
 if __name__ == '__main__':
+    # For local development
     app.run(debug=True, host='0.0.0.0', port=5000)
